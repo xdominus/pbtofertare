@@ -15,6 +15,10 @@ function reducer(state, action) {
             return { ...state, selectedItem: action.payload };
         }
 
+        case 'CLEAR_QUOTE': {
+            return { ...state, quote: { quoteItems: [] } };
+        }
+
         case 'ADD_PRODUCT': {
             const newItem = action.payload;
             const quoteItems = [...state.quote.quoteItems, newItem];

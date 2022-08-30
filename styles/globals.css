@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary: #006975;
+    --secondary: #feb925;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -18,10 +23,14 @@ a {
     text-decoration: none;
 }
 
-.product-container {
-    margin-top: 20px;
-}
-
 .product-title {
     font-size: 32px;
+}
+
+.mui-contained-primary {
+    background: var(--primary);
+}
+
+.mui-contained-secondary {
+    background: var(--secondary);
 }

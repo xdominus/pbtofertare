@@ -17,7 +17,6 @@ import QuotePDF from '../Dynamic/QuotePDF';
 
 export default function RoletaTextila() {
     const { state, dispatch } = useContext(Store);
-    const { quote: quote } = state;
 
     const [currency, setCurrency] = useState(false);
     const [refference, setReffecence] = useState('');
@@ -133,7 +132,13 @@ export default function RoletaTextila() {
                     </div>
 
                     <div className="mt-auto">
-                        <Button variant="filled" color="info" type="submit">
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            size="large"
+                            type="submit"
+                            className="mui-contained-secondary"
+                        >
                             Adauga
                         </Button>
                     </div>
@@ -187,7 +192,13 @@ export default function RoletaTextila() {
                         </div>
 
                         {user && (
-                            <Button variant="filled" color="info" type="submit" className="my-auto">
+                            <Button
+                                variant="contained"
+                                color="secondary"
+                                size="large"
+                                type="submit"
+                                className="mui-contained-secondary my-auto"
+                            >
                                 <PDFDownloadLink
                                     document={
                                         <QuotePDF

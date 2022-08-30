@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Store } from '../../utils/StateProvider';
+import { Button } from '@mui/material';
 
 export default function PDFMockup({ currency, refference, product, data, fitting, user }) {
+    const { state, dispatch } = useContext(Store);
+    const {
+        quote: { quoteItems }
+    } = state;
+
     const pieces =
         data &&
         data.quoteItems
@@ -18,9 +25,6 @@ export default function PDFMockup({ currency, refference, product, data, fitting
         data &&
         data.quoteItems
             .map((e, i) => e.Pret * e.Adaos * e.Bucati)
-            .map(function (elt) {
-                return /^\d+$/.test(elt) ? parseInt(elt) : 0;
-            })
             .reduce(function (a, b) {
                 return a + b;
             });
@@ -41,25 +45,24 @@ export default function PDFMockup({ currency, refference, product, data, fitting
             {data &&
                 data.quoteItems.map((e, i) => (
                     <React.Fragment key={i}>
-                        <div className="grid grid-cols-3 gap-5">
-                            <div className="flex space-x-5">
+                        <div className="grid grid-cols-10 gap-5">
+                            <div className="col-span-3 flex space-x-5">
                                 <div className="my-auto">
                                     <h2 className="text-2xl font-semibold">
                                         F{i + 1} / {e.Bucati} BUC
                                     </h2>
                                     <h2 className="text-lg">{product}</h2>
                                 </div>
-
-                                {/* <img src="/images/logo.webp" alt="" className="h-16 object-fit" /> */}
                             </div>
 
-                            <div>
+                            <div className="col-span-3">
                                 {e.Inaltime && <p>Inaltime: {e.Inaltime}mm</p>}
                                 {e.Latime && <p>Latime: {e.Latime}mm</p>}
                                 {e.Lungime && <p>Lungime: {e.Lungime}mm</p>}
                                 {e.MetriiPatrati && <p>Metrii patrati: {e.MetriiPatrati} m2</p>}
                                 {e.Caseta && e.Caseta === 'Da' && <p>Caseta si ghidaje: Da</p>}
                                 {e.Model && <p>Model: {e.Model}</p>}
+                                {e.Vitrare && <p>Vitrare: {e.Vitrare}</p>}
                                 {e.Material && <p>Material: {e.Material}</p>}
                                 {e.Cureluse && <p>Cureluse: {e.Cureluse} buc</p>}
                                 {e.Fermoare && <p>Fermoare: {e.Fermoare} buc</p>}
@@ -67,7 +70,7 @@ export default function PDFMockup({ currency, refference, product, data, fitting
                                 {e.Actionare && <p>Actionare: {e.Actionare}</p>}
                             </div>
 
-                            <div className="mt-auto">
+                            <div className="col-span-3 mt-auto">
                                 <div>
                                     Pret unitar: {Number(e.Pret * e.Adaos).toFixed(2)} {currency ? 'EURO' : 'RON'}
                                 </div>
@@ -76,6 +79,18 @@ export default function PDFMockup({ currency, refference, product, data, fitting
                                     {currency ? 'EURO' : 'RON'}
                                 </div>
                             </div>
+
+                            <div className="col-span-1 my-auto flex justify-center">
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
+                                    size="small"
+                                    className="mui-contained-secondary"
+                                    onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: e.key })}
+                                >
+                                    Sterge
+                                </Button>
+                            </div>
                         </div>
                         <div className="border-b my-5" />
                     </React.Fragment>
@@ -83,7 +98,7 @@ export default function PDFMockup({ currency, refference, product, data, fitting
 
             <div className="flex justify-between">
                 <div>
-                    <p>Montaj: {fitting === 'Da' ? 'Inclus in pret' : fitting}</p>
+                    <p>Montaj: {fitting === 'Da' ? 'Inclus in pret' : 'Fara Montaj'}</p>
                     <p>Total bucati: {pieces}</p>
                 </div>
                 <div className="w-60">

@@ -4,6 +4,7 @@ import RulouFolieNecasetat from './RulouFolieNecasetat';
 import FolieCapseBride from './FolieCapseBride';
 import RoletaTextila from './RoletaTextila';
 import RoletaZebra from './RoletaZebra';
+import JaluzeleVerticale from './JaluzeleVerticale';
 import PanelOrnamental from './PanelOrnamental';
 
 export {
@@ -13,5 +14,6 @@ export {
     FolieCapseBride,
     RoletaTextila,
     RoletaZebra,
+    JaluzeleVerticale,
     PanelOrnamental
 };

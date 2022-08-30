@@ -16,6 +16,7 @@ export default function Layout({ title, description, pageID, children }) {
                     <Navigation />
 
                     <div className="grow">
+                        <div className="bg-white border-b" style={{ height: '73px' }} />
                         <React.Fragment>{children}</React.Fragment>
                     </div>
                 </div>

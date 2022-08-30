@@ -17,7 +17,6 @@ import QuotePDF from '../Dynamic/QuotePDF';
 
 export default function PanelOrnamental() {
     const { state, dispatch } = useContext(Store);
-    const { quote: quote } = state;
 
     const [currency, setCurrency] = useState(false);
     const [refference, setReffecence] = useState('');
@@ -86,9 +85,10 @@ export default function PanelOrnamental() {
             </div>
 
             <form onSubmit={handleForm} className="bg-white shadow p-5 space-y-5">
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-3">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
                     <TextField className="grow" type="Text" name="Model" label="Model" variant="filled" />
                     <TextField className="grow" type="text" name="Culoare" label="Culoare" variant="filled" />
+                    <TextField className="grow" type="text" name="Vitrare" label="Vitrare" variant="filled" />
                     <TextField className="grow" type="number" name="Bucati" label="Bucati" variant="filled" />
                     <TextField
                         className="grow"
@@ -114,7 +114,13 @@ export default function PanelOrnamental() {
                 </div>
 
                 <div className="mt-auto">
-                    <Button variant="filled" color="info" type="submit">
+                    <Button
+                        variant="contained"
+                        color="secondary"
+                        size="large"
+                        type="submit"
+                        className="mui-contained-secondary"
+                    >
                         Adauga
                     </Button>
                 </div>
@@ -167,7 +173,13 @@ export default function PanelOrnamental() {
                         </div>
 
                         {user && (
-                            <Button variant="filled" color="info" type="submit" className="my-auto">
+                            <Button
+                                variant="contained"
+                                color="secondary"
+                                size="large"
+                                type="submit"
+                                className="mui-contained-secondary my-auto"
+                            >
                                 <PDFDownloadLink
                                     document={
                                         <QuotePDF

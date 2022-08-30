@@ -108,7 +108,8 @@ export default function QuotePDF({ currency, refference, product, data, fitting,
                                     {e.Lungime && <Text>Lungime: {e.Lungime}mm</Text>}
                                     {e.MetriiPatrati && <Text>Metrii patrati: {e.MetriiPatrati} m2</Text>}
                                     {e.Material && <Text>Material: {e.Material}</Text>}
-                                    {e.Model && <Text>Material: {e.Model}</Text>}
+                                    {e.Model && <Text>Model: {e.Model}</Text>}
+                                    {e.Vitrare && <Text>Vitrare: {e.Vitrare}</Text>}
                                     {e.Caseta && e.Caseta === 'Da' && <Text>Caseta si ghidaje: Da</Text>}
                                     {e.Cureluse && <Text>Cureluse: {e.Cureluse} buc</Text>}
                                     {e.Fermoare && <Text>Fermoare: {e.Fermoare} buc</Text>}
@@ -139,7 +140,7 @@ export default function QuotePDF({ currency, refference, product, data, fitting,
                 <View style={styles.orderDetails}>
                     <View>
                         <Text>Total bucati: {pieces}</Text>
-                        <Text>Montaj: {fitting === 'Da' ? 'Inclus in pret' : fitting}</Text>
+                        <Text>Montaj: {fitting === 'Da' ? 'Inclus in pret' : 'Fara Montaj'}</Text>
                     </View>
                     <View>
                         <View style={styles.price}>
@@ -182,19 +183,19 @@ export default function QuotePDF({ currency, refference, product, data, fitting,
                     {user && user === 'Ionut' && (
                         <View style={{ display: 'flex', flexDirection: 'column' }}>
                             <Text>Ionut Nita</Text>
-                            <Text>+40 123 456 789</Text>
+                            <Text>+40 723 391 843</Text>
                         </View>
                     )}
                     {user && user === 'Claudiu' && (
                         <View style={{ display: 'flex', flexDirection: 'column' }}>
                             <Text>Claudiu Miron</Text>
-                            <Text>+40 123 456 789</Text>
+                            <Text>+40 786 422 450</Text>
                         </View>
                     )}
                     {user && user === 'Adi' && (
                         <View style={{ display: 'flex', flexDirection: 'column' }}>
                             <Text>Adrian Ciucu</Text>
-                            <Text>+40 123 456 789</Text>
+                            <Text>+40 764 354 474</Text>
                         </View>
                     )}
                 </View>

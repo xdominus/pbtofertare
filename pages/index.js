@@ -8,6 +8,7 @@ import {
     FolieCapseBride,
     RoletaTextila,
     RoletaZebra,
+    JaluzeleVerticale,
     PanelOrnamental
 } from '../components/Products';
 
@@ -29,6 +30,8 @@ export default function Home() {
                 return <RoletaTextila />;
             case 'Roleta Zebra':
                 return <RoletaZebra />;
+            case 'Jaluzele Verticale':
+                return <JaluzeleVerticale />;
             case 'Panel Ornamental':
                 return <PanelOrnamental />;
 

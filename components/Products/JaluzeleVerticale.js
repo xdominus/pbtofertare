@@ -15,7 +15,7 @@ import { Store } from '../../utils/StateProvider';
 import PDFMockup from '../Dynamic/PDFMockup';
 import QuotePDF from '../Dynamic/QuotePDF';
 
-export default function FolieCapseBride() {
+export default function JaluzeleVerticale() {
     const { state, dispatch } = useContext(Store);
 
     const [currency, setCurrency] = useState(false);
@@ -50,16 +50,16 @@ export default function FolieCapseBride() {
         <div className="product-container container space-y-4">
             <div className="flex justify-between items-center bg-white shadow p-5">
                 <div>
-                    <h1 className="product-title">Folie cu Capse si Bride</h1>
+                    <h1 className="product-title">Jaluzele Verticale</h1>
                     <div className="flex space-x-2">
                         <h4>Obtinere pret:</h4>
                         <a
-                            href="https://topdivers.ro/produs/calculator-preturi-folie-terasa/"
+                            href="mailto:office@jaluzele-rulouri.ro"
                             className="underline text-blue-400"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            TopDivers
+                            office@jaluzele-rulouri.ro
                         </a>
                     </div>
                 </div>
@@ -86,15 +86,9 @@ export default function FolieCapseBride() {
 
             <form onSubmit={handleForm} className="bg-white shadow p-5 space-y-5">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-                    <TextField
-                        className="grow"
-                        type="number"
-                        name="MetriiPatrati"
-                        label="Metrii patrati"
-                        variant="filled"
-                    />
-                    <TextField className="grow" type="number" name="Cureluse" label="Cureluse" variant="filled" />
-                    <TextField className="grow" type="number" name="Fermoare" label="Fermoare" variant="filled" />
+                    <TextField className="grow" type="number" name="Inaltime" label="Inaltime" variant="filled" />
+                    <TextField className="grow" type="number" name="Latime" label="Latime" variant="filled" />
+                    <TextField className="grow" type="text" name="Material" label="Material" variant="filled" />
                     <TextField className="grow" type="number" name="Bucati" label="Bucati" variant="filled" />
                     <TextField
                         className="grow"
@@ -120,13 +114,22 @@ export default function FolieCapseBride() {
                 </div>
 
                 <div className="flex justify-between">
-                    <FormControl>
-                        <FormLabel id="demo-radio-buttons-group-label">Actionare</FormLabel>
-                        <RadioGroup aria-labelledby="demo-radio-buttons-group-label" name="Actionare">
-                            <FormControlLabel value="Electric" control={<Radio />} label="Electric" />
-                            <FormControlLabel value="Manual" control={<Radio />} label="Manual" />
-                        </RadioGroup>
-                    </FormControl>
+                    <div className="flex space-x-10">
+                        <FormControl>
+                            <FormLabel id="demo-radio-buttons-group-label">Actionare</FormLabel>
+                            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" name="Actionare">
+                                <FormControlLabel value="Electric" control={<Radio />} label="Electric" />
+                                <FormControlLabel value="Manual" control={<Radio />} label="Manual" />
+                            </RadioGroup>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel id="demo-radio-buttons-group-label">Caseta si ghidaje</FormLabel>
+                            <RadioGroup aria-labelledby="demo-radio-buttons-group-label" name="Caseta">
+                                <FormControlLabel value="Da" control={<Radio />} label="Da" />
+                                <FormControlLabel value="Nu" control={<Radio />} label="Nu" />
+                            </RadioGroup>
+                        </FormControl>
+                    </div>
 
                     <div className="mt-auto">
                         <Button

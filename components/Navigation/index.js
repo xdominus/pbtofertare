@@ -15,7 +15,11 @@ export default function Navigation() {
             type: 'SET_PRODUCT',
             payload: e
         });
-        console.log(state);
+
+        dispatch({
+            type: 'CLEAR_QUOTE',
+            payload: e
+        });
     };
 
     return (
@@ -28,19 +32,20 @@ export default function Navigation() {
             }}
         >
             <Toolbar className="py-1 flex justify-center">
-                <img src="/images/logo.webp" alt="" className="h-16 w-full object-contain" />
+                <img src="/images/logo.webp" alt="" className="h-16 w-fit object-contain" />
             </Toolbar>
             <Divider />
             <Box sx={{ overflow: 'auto' }}>
                 <List>
                     {[
-                        'Rulou de Folie Necasetat',
-                        'Rulou de Folie Casetat',
-                        'Folie cu Capse si Bride',
                         'Plasa Plisse',
                         'Roleta Textila',
                         'Roleta Zebra',
-                        'Panel Ornamental'
+                        'Jaluzele Verticale',
+                        'Panel Ornamental',
+                        'Rulou de Folie Necasetat',
+                        'Rulou de Folie Casetat',
+                        'Folie cu Capse si Bride'
                     ].map((e, i) => (
                         <React.Fragment key={i}>
                             <ListItem disablePadding>
