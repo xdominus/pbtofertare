@@ -47,9 +47,9 @@ export default function RulouFolieNecasetat() {
     };
 
     return (
-        <div className="product-container container space-y-4">
-            <div className="flex justify-between items-center bg-white shadow p-5">
-                <div>
+        <div className="product-container space-y-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white shadow p-5">
+                <div className="space-y-4">
                     <h1 className="product-title">Rulou de Folie Necasetat</h1>
                     <div className="flex space-x-2">
                         <h4>Obtinere pret:</h4>
@@ -64,14 +64,14 @@ export default function RulouFolieNecasetat() {
                     </div>
                 </div>
 
-                <div className="flex flex-row items-center space-x-10">
+                <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 items-center space-x-10">
                     <TextField
                         type="text"
                         name="Referinta"
                         label="Referinta proiect"
                         variant="filled"
                         onChange={(e) => setReffecence(e.target.value)}
-                        className="w-96"
+                        className="lg:w-96"
                     />
 
                     <div className="curreny-container">

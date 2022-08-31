@@ -42,9 +42,7 @@ export default function Home() {
 
     return (
         <Layout>
-            <div className="pb-16">
-                <div className="container p-5">{handleProduct()}</div>
-            </div>
+            <div className="p-5 pb-16">{handleProduct()}</div>
         </Layout>
     );
 }
