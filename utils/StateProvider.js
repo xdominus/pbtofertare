@@ -25,6 +25,17 @@ function reducer(state, action) {
             return { ...state, quote: { quoteItems } };
         }
 
+        case 'UPDATE_PRODUCT': {
+            const updatedProduct = state.quote.quoteItems.map((items) => {
+                if (items.key === action.payload.key) {
+                    return action.payload;
+                }
+                return items;
+            });
+            console.log(updatedProduct);
+            return { ...state, quote: { quoteItems: updatedProduct } };
+        }
+
         case 'REMOVE_ITEM':
             const quoteItems = state.quote.quoteItems.filter((item) => item.key !== action.payload);
             return { ...state, quote: { ...state.quote, quoteItems } };

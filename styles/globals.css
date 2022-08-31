@@ -5,6 +5,7 @@
 :root {
     --primary: #006975;
     --secondary: #feb925;
+    --danger: #d40000;
 }
 
 * {
@@ -33,4 +34,8 @@ a {
 
 .mui-contained-secondary {
     background: var(--secondary);
+}
+
+.mui-contained-danger {
+    background: var(--danger);
 }

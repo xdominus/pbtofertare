@@ -141,10 +141,10 @@ export default function Layout({ title, description, pageID, children }) {
                                     'Roleta Textila',
                                     'Roleta Zebra',
                                     'Jaluzele Verticale',
-                                    'Panel Ornamental',
                                     'Rulou de Folie Necasetat',
                                     'Rulou de Folie Casetat',
-                                    'Folie cu Capse si Bride'
+                                    'Folie cu Capse si Bride',
+                                    'Panel Ornamental'
                                 ].map((e, i) => (
                                     <React.Fragment key={i}>
                                         <ListItem disablePadding>

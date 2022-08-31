@@ -11,6 +11,11 @@ export const theme = createTheme({
             main: '#feb925',
             dark: '#feb925',
             contrastText: '#ffffff'
+        },
+        danger: {
+            main: '#d40000',
+            dark: '#d40000',
+            contrastText: '#ffffff'
         }
     }
 });
