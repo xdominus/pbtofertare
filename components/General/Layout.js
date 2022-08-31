@@ -16,6 +16,7 @@ import {
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRight from '@mui/icons-material/ChevronRight';
 import { Store } from '../../utils/StateProvider';
 
 const drawerWidth = 240;
