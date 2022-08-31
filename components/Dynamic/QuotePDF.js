@@ -10,6 +10,11 @@ export default function QuotePDF({ currency, refference, product, data, fitting,
             padding: '20px 40px',
             backgroundColor: 'white'
         },
+        date: {
+            position: 'absolute',
+            top: '13%',
+            left: '7.5%'
+        },
         headerImage: {
             height: '80px',
             width: '100%',
@@ -75,6 +80,16 @@ export default function QuotePDF({ currency, refference, product, data, fitting,
     return (
         <Document>
             <Page size="A4" style={styles.page} wrap>
+                <View style={styles.date}>
+                    <Text>
+                        {('0' + new Date().getDate()).slice(-2) +
+                            '.' +
+                            ('0' + (new Date().getMonth() + 1)).slice(-2) +
+                            '.' +
+                            new Date().getFullYear()}
+                    </Text>
+                </View>
+
                 <Image src="/images/pdf-logo.png" alt="" style={styles.headerImage} />
                 <View style={styles.header}>
                     <Text style={styles.header.title}>OFERTA DE PRET</Text>
