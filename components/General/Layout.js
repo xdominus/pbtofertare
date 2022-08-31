@@ -69,6 +69,8 @@ export default function Layout({ title, description, pageID, children }) {
         selectedItem,
         quote: { quoteItems }
     } = state;
+    const theme = useTheme();
+    const [open, setOpen] = useState(false);
 
     const handleProduct = (e) => {
         dispatch({
@@ -80,10 +82,8 @@ export default function Layout({ title, description, pageID, children }) {
             type: 'CLEAR_QUOTE',
             payload: e
         });
+        setOpen(false);
     };
-
-    const theme = useTheme();
-    const [open, setOpen] = useState(false);
 
     const handleDrawerOpen = () => {
         setOpen(true);
