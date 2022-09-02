@@ -128,6 +128,7 @@ export default function QuotePDF({ currency, refference, product, data, fitting,
                                     {e.Caseta && e.Caseta === 'Da' && <Text>Caseta si ghidaje: Da</Text>}
                                     {e.Cureluse && <Text>Cureluse: {e.Cureluse} buc</Text>}
                                     {e.Fermoare && <Text>Fermoare: {e.Fermoare} buc</Text>}
+                                    {e.Canate && <Text>Canate: {e.Canate}</Text>}
                                     {e.Culoare && <Text>Culoare: {e.Culoare}</Text>}
                                     {e.Actionare && <Text>Actionare: {e.Actionare}</Text>}
                                 </View>

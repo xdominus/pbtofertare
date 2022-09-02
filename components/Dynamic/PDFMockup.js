@@ -111,6 +111,7 @@ export default function PDFMockup({ currency, refference, product, data, fitting
                                     {e.Cureluse && <p>Cureluse: {e.Cureluse} buc</p>}
                                     {e.Fermoare && <p>Fermoare: {e.Fermoare} buc</p>}
                                     {e.Culoare && <p>Culoare: {e.Culoare}</p>}
+                                    {e.Canate && <p>Canate: {e.Canate}</p>}
                                     {e.Actionare && <p>Actionare: {e.Actionare}</p>}
                                 </div>
 

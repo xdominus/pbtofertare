@@ -88,6 +88,7 @@ export default function PlasaPlisse() {
                     <TextField className="grow" type="number" name="Inaltime" label="Inaltime" variant="filled" />
                     <TextField className="grow" type="number" name="Latime" label="Latime" variant="filled" />
                     <TextField className="grow" type="text" name="Culoare" label="Culoare" variant="filled" />
+                    <TextField className="grow" type="text" name="Canate" label="Canate" variant="filled" />
                     <TextField className="grow" type="number" name="Bucati" label="Bucati" variant="filled" />
                     <TextField
                         className="grow"
