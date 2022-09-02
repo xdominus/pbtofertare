@@ -112,15 +112,27 @@ export default function PlasaPlisse() {
                         }}
                     />
                 </div>
-                <Button
-                    variant="contained"
-                    color="secondary"
-                    size="large"
-                    type="submit"
-                    className="mui-contained-secondary"
-                >
-                    Adauga
-                </Button>
+                <div className="flex justify-between">
+                    <FormControl>
+                        <FormLabel id="demo-radio-buttons-group-label">Precadru</FormLabel>
+                        <RadioGroup aria-labelledby="demo-radio-buttons-group-label" name="Precadru">
+                            <FormControlLabel value="Da" control={<Radio />} label="Da" />
+                            <FormControlLabel value="Nu" control={<Radio />} label="Nu" />
+                        </RadioGroup>
+                    </FormControl>
+
+                    <div className="mt-auto">
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            size="large"
+                            type="submit"
+                            className="mui-contained-secondary"
+                        >
+                            Adauga
+                        </Button>
+                    </div>
+                </div>
             </form>
 
             {state.quote && state.quote.quoteItems.length >= 1 && (

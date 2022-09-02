@@ -129,6 +129,7 @@ export default function QuotePDF({ currency, refference, product, data, fitting,
                                     {e.Cureluse && <Text>Cureluse: {e.Cureluse} buc</Text>}
                                     {e.Fermoare && <Text>Fermoare: {e.Fermoare} buc</Text>}
                                     {e.Canate && <Text>Canate: {e.Canate}</Text>}
+                                    {e.Precadru && <Text>Precadru: {e.Precadru}</Text>}
                                     {e.Culoare && <Text>Culoare: {e.Culoare}</Text>}
                                     {e.Actionare && <Text>Actionare: {e.Actionare}</Text>}
                                 </View>
