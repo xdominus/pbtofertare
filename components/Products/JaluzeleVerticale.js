@@ -86,8 +86,8 @@ export default function JaluzeleVerticale() {
 
             <form onSubmit={handleForm} className="bg-white shadow p-5 space-y-5">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-                    <TextField className="grow" type="number" name="Inaltime" label="Inaltime" variant="filled" />
                     <TextField className="grow" type="number" name="Latime" label="Latime" variant="filled" />
+                    <TextField className="grow" type="number" name="Inaltime" label="Inaltime" variant="filled" />
                     <TextField className="grow" type="text" name="Material" label="Material" variant="filled" />
                     <TextField className="grow" type="number" name="Bucati" label="Bucati" variant="filled" />
                     <TextField
